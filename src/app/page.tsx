@@ -86,11 +86,12 @@ const Title = styled.h2`
 `
 
 export default function Home() {
-  const [appid1, setAppid1] = useState<string>("1e924fee-f001-443b-82e7-29ef1a185ccc")
-  const [appid2, setAppid2] = useState<string>("39a00e9e-7e6d-461e-9b9d-d520b355d1c0")
-  const [value1, setValue1] = useState<string>("ae45039d944446a8bae99291cd4e00c5")
-  const [value2, setValue2] = useState<string>("c7eab8b7d7e44b05b41b613fe548edf5")
-  const [value3, setValue3] = useState<string>("762be634cfa1473eaaf374fa48504886")
+  const [appid1, setAppid1] = useState<string>("9be8671e-cb8a-4faa-b57f-c4fafb2f84b7")
+  const [value1, setValue1] = useState<string>("9cc9841af292482ea072616b9c113503")
+
+  const [appid2, setAppid2] = useState<string>("9be8671e-cb8a-4faa-b57f-c4fafb2f84b7")
+  const [value2, setValue2] = useState<string>("61f99a42f6824e218940c6b9594361c1")
+
   const [account, setAccount] = useState<string>()
 
   const [result, setResult] = useState<any>()
@@ -198,16 +199,16 @@ export default function Home() {
           </FormItem>
           <FormItem>
             <RightContainer>
-              <Button onClick={() => start([value1], appid1, account)}>Start</Button>
+              <Button onClick={() => start([value1], appid1, account)}>Start Facebook Check</Button>
             </RightContainer>
           </FormItem>
           <FormItem>
             {result && <JSONPretty themeClassName='custom-json-pretty' id='json-pretty' data={result}></JSONPretty>}
           </FormItem>
         </FromContainer>
-        {/* <FromContainer>
+        <FromContainer>
           <FormItem>
-            <Label>Appid:</Label>
+            <Label>Our Dapp:</Label>
             <Input value={appid2} onInput={(e) => setAppid2(e.target.value)} />
           </FormItem>
           <FormItem>
@@ -215,18 +216,14 @@ export default function Home() {
             <Input value={value2} onInput={(e) => setValue2(e.target.value)} />
           </FormItem>
           <FormItem>
-            <Label>Schema Id2:</Label>
-            <Input value={value3} onInput={(e) => setValue3(e.target.value)} />
-          </FormItem>
-          <FormItem>
             <RightContainer>
-              <Button onClick={() => start([value2, value3], appid2)}>Start multi-schemas</Button>
+              <Button onClick={() => start([value2], appid2, account)}>Start OKX balance Check</Button>
             </RightContainer>
           </FormItem>
           <FormItem>
             {result2 && <JSONPretty themeClassName='custom-json-pretty' id='json-pretty1' data={result2}></JSONPretty>}
           </FormItem>
-        </FromContainer> */}
+        </FromContainer>
       </FormGrid>
     </main>
   )
