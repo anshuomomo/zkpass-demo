@@ -86,11 +86,11 @@ const Title = styled.h2`
 `
 
 export default function Home() {
-  const [appid1, setAppid1] = useState<string>("9be8671e-cb8a-4faa-b57f-c4fafb2f84b7")
-  const [value1, setValue1] = useState<string>("9cc9841af292482ea072616b9c113503")
+  const [appid1, setAppid1] = useState<string>("a8bdb3fb-3e72-4a42-8302-16e2d284b5bf")
+  const [value1, setValue1] = useState<string>("b974120d2d5b4781a5afa9ce0d39cad5")
 
-  const [appid2, setAppid2] = useState<string>("9be8671e-cb8a-4faa-b57f-c4fafb2f84b7")
-  const [value2, setValue2] = useState<string>("61f99a42f6824e218940c6b9594361c1")
+  const [appid2, setAppid2] = useState<string>("a8bdb3fb-3e72-4a42-8302-16e2d284b5bf")
+  const [value2, setValue2] = useState<string>("d7bd3e629938456c98f2e434955f0963")
 
   const [account, setAccount] = useState<string>()
 
@@ -217,7 +217,7 @@ export default function Home() {
           </FormItem>
           <FormItem>
             <RightContainer>
-              <Button onClick={() => start([value2], appid2, account)}>Start OKX balance Check</Button>
+              <Button onClick={() => start([value2], appid2, account)}>Start BN balance Check</Button>
             </RightContainer>
           </FormItem>
           <FormItem>
